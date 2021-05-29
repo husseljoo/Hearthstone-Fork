@@ -1,0 +1,206 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 536870912 bytes for Failed to commit area from 0x0000000601e00000 to 0x0000000621e00000 of length 536870912.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3301), pid=24916, tid=26224
+#
+# JRE version:  (13.0.1+9) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 view.CardButton
+
+Host: Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz, 12 cores, 31G,  Windows 10 , 64 bit Build 17763 (10.0.17763.1158)
+Time: Wed Apr 22 18:35:36 2020 Egypt Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000023899b9f000):  JavaThread "Unknown thread" [_thread_in_vm, id=26224, stack(0x0000009ae4b00000,0x0000009ae4c00000)]
+
+Stack: [0x0000009ae4b00000,0x0000009ae4c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x626eca]
+V  [jvm.dll+0x772c6a]
+V  [jvm.dll+0x77441f]
+V  [jvm.dll+0x774a23]
+V  [jvm.dll+0x24da58]
+V  [jvm.dll+0x62438a]
+V  [jvm.dll+0x618f75]
+V  [jvm.dll+0x30c61c]
+V  [jvm.dll+0x30c452]
+V  [jvm.dll+0x311bc6]
+V  [jvm.dll+0x355ce6]
+V  [jvm.dll+0x3554c0]
+V  [jvm.dll+0x2e729a]
+V  [jvm.dll+0x2e8532]
+V  [jvm.dll+0x74fcd8]
+V  [jvm.dll+0x363739]
+V  [jvm.dll+0x732dc5]
+V  [jvm.dll+0x3ce2ef]
+V  [jvm.dll+0x3d0611]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x21ffa]
+C  [KERNEL32.DLL+0x17974]
+C  [ntdll.dll+0x6a271]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8f59746b8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000023899c25000 GCTaskThread "GC Thread#0" [stack: 0x0000009ae4c00000,0x0000009ae4d00000] [id=16936]
+  0x0000023899c47000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000009ae4d00000,0x0000009ae4e00000] [id=26324]
+  0x0000023899c4d800 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000009ae4e00000,0x0000009ae4f00000] [id=34180]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8f51a6f67]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000023899b9bde0] Heap_lock - owner thread: 0x0000023899b9f000
+
+Heap address: 0x0000000601e00000, size: 8162 MB, Compressed Oops mode: Non-zero based: 0x0000000601e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.011 Loaded shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\zip.dll
+Event: 0.012 Loaded shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\jimage.dll
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.014 Loading shared library C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff64a0f0000 - 0x00007ff64a0ff000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\javaw.exe
+0x00007ff95a830000 - 0x00007ff95aa1d000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ff9581f0000 - 0x00007ff9582a3000 	C:\windows\System32\KERNEL32.DLL
+0x00007ff957250000 - 0x00007ff9574e5000 	C:\windows\System32\KERNELBASE.dll
+0x00007ff9568f0000 - 0x00007ff9569ea000 	C:\windows\System32\ucrtbase.dll
+0x00007ff93a760000 - 0x00007ff93a778000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\jli.dll
+0x00007ff9382e0000 - 0x00007ff9382f5000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\VCRUNTIME140.dll
+0x00007ff959f50000 - 0x00007ff959ff3000 	C:\windows\System32\ADVAPI32.dll
+0x00007ff9582b0000 - 0x00007ff95834e000 	C:\windows\System32\msvcrt.dll
+0x00007ff958020000 - 0x00007ff9580be000 	C:\windows\System32\sechost.dll
+0x00007ff958560000 - 0x00007ff958682000 	C:\windows\System32\RPCRT4.dll
+0x00007ff958750000 - 0x00007ff9588e7000 	C:\windows\System32\USER32.dll
+0x00007ff9579c0000 - 0x00007ff9579e0000 	C:\windows\System32\win32u.dll
+0x00007ff95a310000 - 0x00007ff95a339000 	C:\windows\System32\GDI32.dll
+0x00007ff942ae0000 - 0x00007ff942d59000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.1158_none_de722d88534a897f\COMCTL32.dll
+0x00007ff957520000 - 0x00007ff9576b9000 	C:\windows\System32\gdi32full.dll
+0x00007ff957a50000 - 0x00007ff957d7c000 	C:\windows\System32\combase.dll
+0x00007ff9578a0000 - 0x00007ff957940000 	C:\windows\System32\msvcp_win.dll
+0x00007ff957940000 - 0x00007ff9579be000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ff951710000 - 0x00007ff95171a000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ff95a340000 - 0x00007ff95a36e000 	C:\windows\System32\IMM32.DLL
+0x00007ff9336b0000 - 0x00007ff93374b000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\msvcp140.dll
+0x00007ff8f4eb0000 - 0x00007ff8f5a16000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\server\jvm.dll
+0x00007ff958740000 - 0x00007ff958748000 	C:\windows\System32\PSAPI.DLL
+0x00007ff935600000 - 0x00007ff935609000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ff954420000 - 0x00007ff954444000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ff9589c0000 - 0x00007ff958a2d000 	C:\windows\System32\WS2_32.dll
+0x00007ff9543f0000 - 0x00007ff95441d000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x00007ff9579e0000 - 0x00007ff957a2a000 	C:\windows\System32\cfgmgr32.dll
+0x00007ff956820000 - 0x00007ff956831000 	C:\windows\System32\kernel.appcore.dll
+0x00007ff953420000 - 0x00007ff953430000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\verify.dll
+0x00007ff944530000 - 0x00007ff94471d000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007ff944500000 - 0x00007ff94452a000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007ff952260000 - 0x00007ff952286000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\java.dll
+0x00007ff953400000 - 0x00007ff953417000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\zip.dll
+0x00007ff953180000 - 0x00007ff95318a000 	C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.1158_none_de722d88534a897f;C:\Users\hussi\OneDrive\Desktop\IDE xxxx\jdk-13.0.1_windows-x64_bin\jdk-13.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: view.CardButton
+java_class_path (initial): C:\Users\hussi\eclipse-workspace\Milestone 3 till now\bin;C:\Users\hussi\.p2\pool\plugins\org.junit_4.12.0.v201504281640\junit.jar;C:\Users\hussi\.p2\pool\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\Users\hussi\eclipse-workspace\Milestone 3 till now\jgoodies-common-1.8.0.jar;C:\Users\hussi\eclipse-workspace\Milestone 3 till now\jgoodies-forms-1.8.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 536870912                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 8558477312                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 8558477312                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/hussi/OneDrive/Desktop/IDE xxxx/jdk-13.0.1_windows-x64_bin/jdk-13.0.1/bin/server;C:/Users/hussi/OneDrive/Desktop/IDE xxxx/jdk-13.0.1_windows-x64_bin/jdk-13.0.1/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Users\hussi\OneDrive\Desktop\YARAB YENZEL\runtime\win64;C:\Users\hussi\OneDrive\Desktop\YARAB YENZEL\bin;C:\Program Files\MATLAB\R2018a\runtime\win64;C:\Program Files\MATLAB\R2018a\bin;C:\Program Files (x86)\ZeroTier\One\;C:\Program Files\Microsoft VS Code\bin;C:\Users\hussi\AppData\Local\Microsoft\WindowsApps;C:\Users\hussi\AppData\Local\Programs\Python\Python38-32;;C:\Users\hussi\OneDrive\Desktop\IDE xxxx\java-2019-09\eclipse;
+USERNAME=hussi
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17763 (10.0.17763.1158)
+
+CPU:total 12 (initial active 12) (6 cores per cpu, 2 threads per core) family 6 model 158 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 32644M (18658M free)
+TotalPageFile size 93513M (AvailPageFile size 357M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 65M, peak: 577M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.1+9) for windows-amd64 JRE (13.0.1+9), built on Oct  6 2019 12:37:49 by "mach5one" with unknown MS VC++:1916
+
+END.
